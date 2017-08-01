@@ -1,7 +1,6 @@
+
 class loginService {
   constructor($http, $q) {
-    ngInject';
-
     //INIT DEPENDENCIES
     this.$http = $http;
     this.$q = $q;
@@ -20,5 +19,5 @@ class loginService {
     return defer.promise;
   }
 }
-
+loginService.$inject = ["$q", "$http"];
 export default loginService;

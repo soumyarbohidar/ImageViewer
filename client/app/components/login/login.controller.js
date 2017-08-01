@@ -1,14 +1,16 @@
+import { loginService } from '../../services/login/login';
+
 class loginController {
-    constructor() {
+    constructor(loginService) {
       this.name = 'login';
       this._loginService = loginService;
-      this.data = this._loginService.data;
     }
     login() {
-      this._loginService.loadData();
+      console.log('Inside login method');
+      this._loginService.getData();
       console.log('inside login controller');
     }
   }
 
 loginController.$inject = ['loginService'];
-  export default loginController;
+export default loginController;
