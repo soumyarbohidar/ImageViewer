@@ -1,20 +1,14 @@
 import template from './login.component.html';
 import './login.component.scss';
+import controller from './login.controller.js';
 
-const LoginComponent = {
-  template
+
+let loginComponent = {
+  restrict: 'E',
+  bindings: {},
+  template,
+  controller,
+  controllerAs: 'loginController'
 };
 
-angular.module('app', [])
-    .controller('LoginController', ['$scope', function($scope) {
-      $scope.list = [];
-      $scope.text = 'hello';
-      $scope.submit = function() {
-        if ($scope.text) {
-          $scope.list.push(this.text);
-          $scope.text = '';
-        }
-      };
-    }]);
-
-export default LoginComponent;
+export default loginComponent;
